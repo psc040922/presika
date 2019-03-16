@@ -6,7 +6,6 @@ import json
 import time
 import urllib
 import urllib.request
-import bs4
 
 
 
