@@ -1,12 +1,7 @@
 import discord
 import openpyxl
 import asyncio
-import datetime
-import json
-import time
-import urllib
-import urllib.request
-import bs4
+
 
 
 
@@ -1967,7 +1962,7 @@ async def on_message(message):
         embed.add_field(name='제조시간', value='01:05', inline=True) 
         embed.add_field(name='스킬', value='진압신호' + '\n' + '지속시간 동안 아군 전원 화력 증가' + '\n' + '초반 쿨타임 : 6초' + '\n' + '쿨타임 : 12초' + '\n' + '지속시간 : 8초' + '\n' + '화력 증가치 : 25%', inline=True)  
         embed.add_field(name='버프', value='1편제 - 사속 15%, 명중 25% 증가' + '\n' + '■□■ 2편제 - 사속 18%, 명중 31% 증가' + '\n' + '□◎□ 3편제 - 사속 22%, 명중 37% 증가' + '\n' + '■□■ 4편제 - 사속 26%, 명중 43% 증가' + '\n' + '5편제 - 사속 30%, 명중 50% 증가', inline=True)
-        embed.add_field(name='별명', value='곰누나, 웅녀, 그리즐리', inline=True)
+        embed.add_field(name='별명', value='켈리코, 미역', inline=True)
         print('M950A')
 
         await client.send_message(channel,embed=embed)
