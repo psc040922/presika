@@ -41,6 +41,125 @@ async def on_message(message):
 
         await client.send_message(channel,embed=embed)
 
+    if message.content.startswith("/제조식?"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '제조식 명령어 목록',
+            description = '나는 더 이상 자원 관리를 그만두겠다..!',
+            colour = discord.Colour.red()
+        )
+
+        embed.set_footer(text = ' ')
+        embed.add_field(name = '범용식', value = '/범용식 입력',inline = False)
+        embed.add_field(name = 'HG식', value = '/HG식 또는 /권총식 입력',inline = False)
+        embed.add_field(name='SMG식', value='/SMG식 또는 /슴지식 입력', inline=False) 
+        embed.add_field(name='AR식', value='/AR식 또는 /에알식 입력', inline=False)
+        embed.add_field(name='RF식', value='/RF식 또는 /라플식 입력', inline=False)
+        embed.add_field(name='MG식', value='/MG식 또는 /망가식 입력', inline=False)
+        embed.add_field(name='SG식', value='/SG식 또는 /샷건식 입력', inline=False)
+        embed.add_field(name='중형범용식', value='/중범용식 또는 /중형범용식 입력', inline=False)
+
+    if message.content.startswith("/범용식"):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '범용식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'AR, SMG, RF 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='430 430 430 230', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/권총식") or message.content.startswith('/HG식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'HG식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'HG 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='120 120 120 120', inline=False)
+        embed.add_field(name = '저격식', value='170 160 160 30', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/슴지식") or message.content.startswith('/SMG식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'SMG식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'SMG 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='430 430 130 230', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/에알식") or message.content.startswith('/AR식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'AR식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'AR 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='130 430 430 230', inline=False)
+        embed.add_field(name = '저격식', value='95 400 400 95', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/라플식") or message.content.startswith('/RF식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'RF식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'RF 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='430 130 430 230', inline=False)
+        embed.add_field(name = '저격식', value='404 131 404 233', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/망가식") or message.content.startswith('/MG식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'MG식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'MG 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='600 600 100 400', inline=False)
+        embed.add_field(name = '저격식', value='730 630 130 430', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/샷건식") or message.content.startswith('/SG식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = 'SG식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'SG 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='6000 2000 6000 4000', inline=False)
+
+        await client.send_message(channel,embed=embed)
+
+    if message.content.startswith("/중범용식") or message.content.startswith('/중형범용식'):
+        channel = message.channel
+        embed = discord.Embed(
+            title = '중형 범용식',
+            colour = discord.Colour.blue()
+        )
+
+        embed.set_footer(text = 'SMG AR RF MG SG 획득 가능')
+        embed.add_field(name = '인력 탄약 식량 부품', value='6000 2000 6000 4000', inline=False)
+        embed.add_field(name = '부가설명', value='SG식의 비해 SG가 나올 확률보다 HG제외 다른 모든 총기군의 5성 출현률이 높다', inline=False)
+
+        await client.send_message(channel,embed=embed)
+        
     if message.content.startswith("/DB Online?"):
          await client.send_message(message.channel, embed=discord.Embed(title = 'DB Online', descrption = ''))
 
